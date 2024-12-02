@@ -87,28 +87,39 @@ header p {
     color: #ffcc00;
 }
 
-/* Estilos de la sección de "Su Parecido" */
-.comparison {
-    text-align: center;
-    margin-top: 20px;
-}
-
+/* Ajuste del tamaño de las imágenes de comparación */
 .comparison-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 250px; /* Aumentamos el ancho del contenedor */
+    height: 500px; /* Aumentamos la altura del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
 }
 
 .comparison-image {
-    width: 80px;  /* Tamaño ajustado para que no sea demasiado grande */
-    height: 80px;
-    object-fit: cover;  /* Asegura que la imagen se ajuste bien sin distorsionarse */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    height: 100%; /* Ocupa la altura completa del contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
     border-radius: 10px;
-    margin-right: 10px;
+    transition: opacity 0.5s ease;
+    position: absolute; /* Superposición de imágenes */
 }
 
-/* Si deseas que la imagen de "Su Parecido" sea más grande que la imagen principal, puedes aumentar el tamaño */
-.comparison-wrapper img {
-    width: 120px;  /* Puedes ajustar este tamaño según lo necesites */
-    height: 120px;
+/* Centrar el texto "Su Parecido" */
+.comparison p {
+    text-align: center;
+    font-size: 1.5rem; /* Aumentamos el tamaño de la fuente */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fff; /* Puedes ajustar el color según el diseño general */
+}
+
+
+.comparison-image.hidden {
+    opacity: 0;
+    z-index: -1;
+}
+
+.comparison-image.visible {
+    opacity: 1;
+    z-index: 1;
 }
