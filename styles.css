@@ -1,0 +1,114 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 5px solid #ffcc00;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.meme-card {
+    background-color: #222;
+    border-radius: 15px;
+    width: 300px;
+    margin: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.meme-card:hover {
+    transform: scale(1.05);
+}
+
+.meme-image {
+    width: 100%;
+    height: auto;  /* Ajustamos la altura para que se adapte proporcionalmente */
+    object-fit: cover;  /* Esto asegura que la imagen se adapte sin cortarse, pero se ajusta al contenedor */
+    border-bottom: 5px solid #ffcc00;
+}
+
+.card-details {
+    padding: 15px;
+    text-align: center;
+}
+
+.meme-name {
+    font-size: 1.8rem;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.meme-description {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.stats {
+    font-size: 1.1rem;
+}
+
+.stat {
+    margin: 5px 0;
+    color: #fff;
+}
+
+.stat strong {
+    color: #ffcc00;
+}
+
+/* Estilos de la sección de "Su Parecido" */
+.comparison {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.comparison-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comparison-image {
+    width: 80px;  /* Tamaño ajustado para que no sea demasiado grande */
+    height: 80px;
+    object-fit: cover;  /* Asegura que la imagen se ajuste bien sin distorsionarse */
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+/* Si deseas que la imagen de "Su Parecido" sea más grande que la imagen principal, puedes aumentar el tamaño */
+.comparison-wrapper img {
+    width: 120px;  /* Puedes ajustar este tamaño según lo necesites */
+    height: 120px;
+}
